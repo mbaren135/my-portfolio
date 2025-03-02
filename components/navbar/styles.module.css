@@ -1,0 +1,35 @@
+.navBar {
+  --navbar-background-color: rgba(30, 58, 138, 1);
+  --navEntry-hover-bg-color: rgba(29, 78, 216, 1);
+
+  background-color: var(--navbar-background-color);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navEntries {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}
+
+.navEntry {
+  height: 50px;
+  list-style: none;
+  align-content: center;
+}
+.navEntry:hover {
+  background-color: var(--navEntry-hover-bg-color);
+}
+.navEntry:first-child {
+  margin-right: auto;
+}
+
+.navLink {
+  display: inline-block;
+  height: 100%;
+  padding: 0px 16px;
+  align-content: center;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+}
