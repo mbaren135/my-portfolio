@@ -6,6 +6,9 @@
   --button-primary-hover: #383838;
   --button-secondary-hover: #f2f2f2;
 
+  --link-primary-color: var(--primary-fill);
+  --link-primary-accent: var(--primary-accent);
+
   display: grid;
   grid-template-rows: 20px 1fr 20px;
   align-items: center;
@@ -24,6 +27,9 @@
 
     --button-primary-hover: #ccc;
     --button-secondary-hover: #1a1a1a;
+
+    --link-primary-color: var(--primary-text-color);
+    --link-primary-accent: var(--primary-accent)
   }
 }
 
@@ -72,7 +78,7 @@
   cursor: pointer;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   font-size: 16px;
   line-height: 20px;
   font-weight: 500;
@@ -98,7 +104,8 @@ a.secondary {
 .footer a {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 4px;
+  color: var(--link-primary-color);
 }
 
 .footer img {
@@ -131,8 +138,9 @@ a.secondary {
   }
 
   .footer a:hover {
-    text-decoration: underline;
+    text-decoration: underline 2px;
     text-underline-offset: 4px;
+    text-decoration-color: var(--link-primary-accent);
   }
 }
 

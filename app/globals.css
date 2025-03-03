@@ -1,8 +1,8 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --primary-fill: rgba(30, 58, 138, 1);
-  --primary-accent: rgba(29, 78, 216, 1);
+  --primary-fill: rgba(29, 78, 216, 1);
+  --primary-accent: rgba(30, 58, 138, 1);
   --primary-text-color: white;
   --nav-height: 60px;
   --page-view-height: calc(100svh - var(--nav-height))
@@ -12,8 +12,8 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
-    --primary-fill: rgba(26, 7, 70, 1);
-    --primary-accent: rgba(39, 10, 107, 1);
+    --primary-fill: rgb(51, 12, 143);
+    --primary-accent: rgb(43, 12, 114);
     --primary-text-color: rgb(193, 72, 254);
   }
 }
