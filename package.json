@@ -6,7 +6,8 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "lint-and-push": "npm run lint && git push || echo 'Linting failed. Fix the errors before pushing'"
   },
   "dependencies": {
     "next": "15.2.0",
