@@ -1,6 +1,6 @@
 .nav {
-  --sidebar-background-color: rgba(30, 58, 138, 0.6);
-  --sidebarEntry-hover-bg-color: rgba(68, 109, 225, 0.6);
+  --sidebar-background-color: rgba(68, 109, 225, 0.6);
+  --sidebarEntry-hover-bg-color: rgba(30, 58, 138, 0.6);
 
   --dark-sidebar-background-color: rgba(52, 22, 104, 0.4);
   --dark-sidebarEntry-hover-bg-color: rgba(96, 41, 179, 0.3);
