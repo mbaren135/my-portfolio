@@ -101,8 +101,8 @@ export default function Home() {
       <div
         style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "20px" }}
       >
-        <Button>Custom Button Default Styles</Button>
-        <Button className={styles.buttonTest}>Custom Button Custom Styles</Button>
+        <Button variant="primary">Custom Button Primary</Button>
+        <Button variant="secondary">Custom Button Secondary</Button>
       </div>
     </div>
   );
