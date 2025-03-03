@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { HomeIcon, MenuIcon, CloseIcon } from "@/assets/icons";
 import { useState } from "react";
-import s from "./styles.module.css";
+import s from "./navbar.module.css";
 import { JSX } from "react";
 
 type Page = {
