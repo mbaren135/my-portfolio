@@ -60,7 +60,6 @@ export default function Home() {
         <h1>Michael Baren</h1>
       </main>
       <Footer />
-      <Footer />
     </div>
   );
 }
