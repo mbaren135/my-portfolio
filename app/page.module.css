@@ -9,13 +9,16 @@
   --link-primary-color: var(--primary-fill);
   --link-primary-accent: var(--primary-accent);
 
+  --link-primary-color: var(--primary-fill);
+  --link-primary-accent: var(--primary-accent);
+
   display: grid;
   grid-template-rows: 20px 1fr 20px;
   align-items: center;
   justify-items: center;
   min-height: var(--page-view-height);
   padding: 40px;
-  gap: 64px;
+  gap: 32px;
   font-family: var(--font-geist-sans);
 }
 
@@ -30,13 +33,17 @@
 
     --link-primary-color: var(--primary-text-color);
     --link-primary-accent: var(--primary-accent)
+
+    --link-primary-color: var(--primary-text-color);
+    --link-primary-accent: var(--primary-accent)
   }
 }
 
 .main {
   display: flex;
+  align-items: center;
   flex-direction: column;
-  gap: 32px;
+  gap: 16px;
   grid-row-start: 2;
 }
 
@@ -60,6 +67,15 @@
   padding: 2px 4px;
   border-radius: 4px;
   font-weight: 600;
+}
+
+.main h1 {
+  font-size: 40px;
+}
+
+.headshot {
+  width: 340px;
+  height: 510px;
 }
 
 .ctas {
@@ -95,35 +111,7 @@ a.secondary {
   min-width: 180px;
 }
 
-.footer {
-  grid-row-start: 3;
-  display: flex;
-  gap: 24px;
-}
 
-.footer a {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  color: var(--link-primary-color);
-}
-
-.footer img {
-  flex-shrink: 0;
-}
-
-.buttonTest {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 200px;
-  max-width: 450px;
-  min-height: 100px;
-  padding: 30px;
-  background-color: red;
-  border-radius: 5px;
-  border: solid 2px orangered;
-}
 
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
@@ -135,12 +123,6 @@ a.secondary {
   a.secondary:hover {
     background: var(--button-secondary-hover);
     border-color: transparent;
-  }
-
-  .footer a:hover {
-    text-decoration: underline 2px;
-    text-underline-offset: 4px;
-    text-decoration-color: var(--link-primary-accent);
   }
 }
 
@@ -170,12 +152,6 @@ a.secondary {
 
   a.secondary {
     min-width: auto;
-  }
-
-  .footer {
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
   }
 }
 

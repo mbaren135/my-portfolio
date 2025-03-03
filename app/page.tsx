@@ -1,5 +1,6 @@
 "use client";
 import { Footer } from "@/components";
+import Image from "next/image";
 import styles from "./page.module.css";
 
 export default function Home() {
@@ -49,8 +50,16 @@ export default function Home() {
     //   </main>
     <div className={styles.page}>
       <main className={styles.main}>
+        <Image
+          className={styles.headshot}
+          src="/images/headshot.JPG"
+          alt="Michael Baren headshot"
+          width={550}
+          height={826}
+        />
         <h1>Michael Baren</h1>
       </main>
+      <Footer />
       <Footer />
     </div>
   );
