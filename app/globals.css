@@ -1,12 +1,18 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary-fill: rgba(30, 58, 138, 1);
+  --primary-accent: rgba(29, 78, 216, 1);
+  --nav-height: 60px;
+  --page-view-height: calc(100svh - var(--nav-height))
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --primary-fill: rgba(26, 7, 70, 1);
+    --primary-accent: rgba(39, 10, 107, 1);
   }
 }
 

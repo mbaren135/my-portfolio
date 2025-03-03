@@ -1,0 +1,17 @@
+.default {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 100px;
+    max-width: 150px;
+    max-height: 50px;
+    padding: 10px;
+    background-color: var(--primary-fill);
+    border-radius: 5px;
+    border: solid 2px var(--primary-accent);
+}
+
+.default:hover {
+    cursor: pointer;
+    background-color: var(--primary-accent);
+}

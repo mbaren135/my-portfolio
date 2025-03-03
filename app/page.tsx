@@ -1,7 +1,12 @@
+"use client";
 import Image from "next/image";
 import styles from "./page.module.css";
+import { useTheme } from "next-themes";
+import Button from "@/components/button";
 
 export default function Home() {
+  const { theme, setTheme } = useTheme();
+
   return (
     // <div className={styles.page}>
     //   <main className={styles.main}>
@@ -91,6 +96,14 @@ export default function Home() {
     //     </a>
     //   </footer>
     // </div>
-    <div className={styles.page}>Michael Baren</div>
+    <div className={styles.page}>
+      <h1>Michael Baren</h1>
+      <div
+        style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "20px" }}
+      >
+        <Button>Custom Button Default Styles</Button>
+        <Button className={styles.buttonTest}>Custom Button Custom Styles</Button>
+      </div>
+    </div>
   );
 }
