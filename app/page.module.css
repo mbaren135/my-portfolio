@@ -9,6 +9,9 @@
   --link-primary-color: var(--primary-fill);
   --link-primary-accent: var(--primary-accent);
 
+  --link-primary-color: var(--primary-fill);
+  --link-primary-accent: var(--primary-accent);
+
   display: grid;
   grid-template-rows: 20px 1fr 20px;
   align-items: center;
@@ -27,6 +30,9 @@
 
     --button-primary-hover: #ccc;
     --button-secondary-hover: #1a1a1a;
+
+    --link-primary-color: var(--primary-text-color);
+    --link-primary-accent: var(--primary-accent)
 
     --link-primary-color: var(--primary-text-color);
     --link-primary-accent: var(--primary-accent)
