@@ -22,7 +22,7 @@ export default function Footer() {
         Github
       </a>
       <a
-        href="/files/resume.pdf"
+        href="/files/Michael_Baren_Resume_2025.pdf"
         download="Michael_Baren_Resume_2025.pdf"
         target="_blank"
         rel="noopener noreferrer"
