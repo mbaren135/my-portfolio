@@ -23,8 +23,9 @@ export default function Footer() {
       </a>
       <a
         href="/files/resume.pdf"
-        download="Michael_Baren_Resume_2025"
+        download="Michael_Baren_Resume_2025.pdf"
         target="_blank"
+        rel="noopener noreferrer"
       >
         <DownloadIcon />
         Resume
