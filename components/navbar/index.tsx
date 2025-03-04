@@ -24,33 +24,32 @@ export default function Navbar() {
 
   return (
     <nav className={s.nav}>
-      <div hidden={!sidebarVisibility}>
-        <ul className={s.sidebar}>
-          <li
-            className={s.navItem}
-            style={{ padding: "0 16px" }}
-            onClick={() => {
-              setSidebarVisibility(false);
-            }}
-          >
-            <CloseIcon color="white" />
-          </li>
-          {pages.map((page, index) => {
-            if (index === 0) return null;
-            return (
-              <li key={index} className={s.navItem}>
-                <Link className={s.navLink} href={page.href}>
-                  {page.label}
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
-      </div>
+      <ul className={`${s.sidebar} ${sidebarVisibility ? s.sidebarOpen : ""}`}>
+        <li
+          className={s.navItem}
+          style={{ padding: "0 16px" }}
+          onClick={() => {
+            setSidebarVisibility(false);
+            console.log("clicked");
+          }}
+        >
+          <CloseIcon color="white" />
+        </li>
+        {pages.map((page, index) => {
+          if (index === 0) return null;
+          return (
+            <li key={index} className={s.navItem}>
+              <Link className={s.navLink} href={page.href}>
+                {page.label}
+              </Link>
+            </li>
+          );
+        })}
+      </ul>
 
       <ul className={s.navList}>
         {pages.map((page, index) => {
-          const styles = s.navItem + (index !== 0 ? (' ' + s.hideOnMobile) : '') 
+          const styles = s.navItem + (index !== 0 ? " " + s.hideOnMobile : "");
           return (
             <li key={index} className={styles}>
               <Link className={s.navLink} href={page.href}>
@@ -60,7 +59,7 @@ export default function Navbar() {
           );
         })}
         <li
-          className={s.navItem + ' ' + s.menuIcon}
+          className={s.navItem + " " + s.menuIcon}
           style={{ padding: "0px 16px" }}
           onClick={() => {
             setSidebarVisibility(true);

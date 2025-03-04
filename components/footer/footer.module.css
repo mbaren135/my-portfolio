@@ -1,16 +1,18 @@
 .footer {
   --link-primary-color: var(--primary-fill);
   --link-primary-accent: var(--primary-accent);
+  --link-primary-hover-fill: rgb(233, 233, 233);
 
   grid-row-start: 3;
   display: flex;
-  gap: 24px;
+  gap: 16px;
 }
 
 @media (prefers-color-scheme: dark) {
   .footer {
     --link-primary-color: var(--primary-text-color);
     --link-primary-accent: var(--primary-accent);
+    --link-primary-hover-fill: rgb(50, 50, 50);
   }
 }
 
@@ -18,6 +20,7 @@
   display: flex;
   align-items: center;
   gap: 4px;
+  padding: 8px;
   color: var(--link-primary-color);
 }
 
@@ -30,6 +33,8 @@
     text-decoration: underline 2px;
     text-underline-offset: 4px;
     text-decoration-color: var(--link-primary-accent);
+    border-radius: 5px;
+    background-color: var(--link-primary-hover-fill);
   }
 }
 

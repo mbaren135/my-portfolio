@@ -1,4 +1,4 @@
-import { FileOpenIcon, GithubIcon, LinkedInIcon } from "@/assets/icons";
+import { DownloadIcon, GithubIcon, LinkedInIcon } from "@/assets/icons";
 
 import s from "./footer.module.css";
 
@@ -23,10 +23,10 @@ export default function Footer() {
       </a>
       <a
         href="/files/resume.pdf"
-        download="Michael_Baren_Resume_2025.pdf"
+        download="Michael_Baren_Resume_2025"
         target="_blank"
       >
-        <FileOpenIcon />
+        <DownloadIcon />
         Resume
       </a>
     </footer>
