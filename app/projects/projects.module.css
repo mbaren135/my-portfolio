@@ -9,11 +9,11 @@
     --link-primary-accent: var(--primary-accent);
   
     display: grid;
-    grid-template-rows: 20px 1fr 20px;
+    grid-template-rows: 20px 1fr;
     align-items: center;
     justify-items: center;
     min-height: var(--page-view-height);
-    padding: 40px;
+    padding: auto 40px auto 40px;
     gap: 32px;
     font-family: var(--font-geist-sans);
   }
