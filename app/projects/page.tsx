@@ -1,35 +1,49 @@
+import Image from "next/image";
 import { Footer } from "@/components";
 import CardCarousel from "./carousel";
 import { ProjectCardType } from "../../types";
 import s from "./projects.module.css";
+import { PortfolioCard, ATSCardContent } from "./carousel/card-contents";
 
 export default function Projects() {
   const projects: ProjectCardType[] = [
     {
-      title: "Test 1",
-      content:
-        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel nesciunt pariatur doloremque nam laborum ipsum ipsa, dignissimos facere est sint ut sequi aspernatur aliquam, vitae, a quibusdam? Harum, corporis officia!",
+      title: "My Portfolio",
+      content: <PortfolioCard />,
     },
     {
-      title: "Test 2",
-      content:
-        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel nesciunt pariatur doloremque nam laborum ipsum ipsa, dignissimos facere est sint ut sequi aspernatur aliquam, vitae, a quibusdam? Harum, corporis officia!",
+      title: "Applicant Tracking System",
+      image: (
+        <Image
+          src="/images/ATS-job-example.png"
+          alt="Michael Baren headshot"
+          width={249}
+          height={110}
+          // onClick={() => console.log("Clicked")}
+        />
+      ),
+      content: <ATSCardContent />,
     },
-    {
-      title: "Test 3",
-      content:
-        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel nesciunt pariatur doloremque nam laborum ipsum ipsa, dignissimos facere est sint ut sequi aspernatur aliquam, vitae, a quibusdam? Harum, corporis officia!",
-    },
-    {
-      title: "Test 4",
-      content:
-        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel nesciunt pariatur doloremque nam laborum ipsum ipsa, dignissimos facere est sint ut sequi aspernatur aliquam, vitae, a quibusdam? Harum, corporis officia!",
-    },
-    {
-      title: "Test 5",
-      content:
-        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel nesciunt pariatur doloremque nam laborum ipsum ipsa, dignissimos facere est sint ut sequi aspernatur aliquam, vitae, a quibusdam? Harum, corporis officia!",
-    },
+    // {
+    //   title: "Test",
+    //   content:
+    //     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, iste. Vitae nisi a libero neque temporibus fuga ducimus debitis, maiores quidem dolore nam, numquam possimus excepturi quo consequatur. Tempora, maiores!",
+    // },
+    // {
+    //   title: "Test",
+    //   content:
+    //     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, iste. Vitae nisi a libero neque temporibus fuga ducimus debitis, maiores quidem dolore nam, numquam possimus excepturi quo consequatur. Tempora, maiores!",
+    // },
+    // {
+    //   title: "Test",
+    //   content:
+    //     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, iste. Vitae nisi a libero neque temporibus fuga ducimus debitis, maiores quidem dolore nam, numquam possimus excepturi quo consequatur. Tempora, maiores!",
+    // },
+    // {
+    //   title: "Test",
+    //   content:
+    //     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, iste. Vitae nisi a libero neque temporibus fuga ducimus debitis, maiores quidem dolore nam, numquam possimus excepturi quo consequatur. Tempora, maiores!",
+    // },
   ];
 
   return (

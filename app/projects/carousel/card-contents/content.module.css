@@ -1,0 +1,25 @@
+.content {
+    --content-link-color: var(--primary-fill);
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.content strong {
+    font-weight: 600;
+}
+
+.content p {
+    margin: 4px;
+}
+
+.content a {
+    color: var(--content-link-color)
+}
+
+@media (prefers-color-scheme: dark) {
+    .content {
+        --content-link-color: var(--primary-text-color);
+    }
+}

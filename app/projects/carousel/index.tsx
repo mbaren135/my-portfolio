@@ -1,6 +1,7 @@
 "use client";
 
 import { ReactNode, useEffect, useState } from "react";
+import Image from "next/image";
 import { ChevronLeftIcon, ChevronRightIcon } from "@/assets/icons";
 import { ProjectCardType } from "../../../types";
 import s from "./carousel.module.css";
@@ -72,7 +73,9 @@ export default function CardCarousel({
       {projects.map((p, index) => {
         return (
           <div key={`card-${index}`} className={s.card}>
-            <Card title={p.title}>{p.content}</Card>
+            <Card title={p.title} image={p.image || null}>
+              {p.content}
+            </Card>
           </div>
         );
       })}
@@ -111,11 +114,45 @@ export default function CardCarousel({
   );
 }
 
-function Card({ title, children }: { title: string; children: ReactNode }) {
+function Card({
+  title,
+  image,
+  children,
+}: {
+  title: string;
+  image: ReactNode | null;
+  children: ReactNode;
+}) {
+  const [isEnlarged, setIsEnlarged] = useState(false);
+
+  if (isEnlarged) {
+    return (
+      // <div className={s.cardContainer}>
+        <div className={s.imageEnlarged} onClick={() => setIsEnlarged(false)}>
+          <Image
+            src="/images/ATS-job-example.png"
+            alt="Michael Baren headshot"
+            width={249}
+            height={110}
+            className={s.image}
+            // onClick={() => console.log("Clicked")}
+          />
+        </div>
+      // </div>
+    );
+  }
+
   return (
-    <div className={s.cardContainer}>
+    // <div className={s.cardContainer}>
+    <>
+      {image ? (
+        <div className={s.thumbnail} onClick={() => setIsEnlarged(true)}>
+          {image}
+        </div>
+      ) : null}
       <div className={s.title}>{title}</div>
       <div className={s.cardBody}>{children}</div>
-    </div>
+    </>
+    // </div>
   );
 }
