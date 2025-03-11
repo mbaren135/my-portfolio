@@ -49,7 +49,6 @@
   position: absolute;
   border-radius: 50%;
   border: transparent;
-  /* height: 30px; */
   top: 50%;
   transform: translateY(-50%);
   z-index: 2;
@@ -101,17 +100,6 @@
   transition: all 500ms ease-in-out;
 }
 
-.imageEnlarged {
-  width: 100%;
-  height: 100%;
-}
-
-.image {
-  width: 100%;
-  height: 100%;
-  /* object-fit: cover; */
-}
-
 .thumbnail {
   width: 100%;
   display: flex;
@@ -120,15 +108,46 @@
 
 .thumbnail:first-child {
   cursor: pointer;
-  /* scale: 1.1; */
-  /* background-color: pink; */
+}
+
+.imageEnlarged {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.closeButton {
+  --close-btn-color: rgba(255, 74, 74, 1);
+
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  margin: 4px;
+  background-color: transparent;
+  color: var(--close-btn-color);
+  border: none;
+}
+.closeButton:hover {
+  border: solid var(--close-btn-color) 1px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
 }
 
 @media (prefers-color-scheme: dark) {
   .card {
     --card-bg-color: rgba(45, 45, 45, 1);
     --card-accent-color: rgba(255, 255, 255, 0.4);
-    /* --card-text-color: var(--primary-text-color) */
     --card-text-color: rgba(255, 255, 255, 1);
   }
 }
