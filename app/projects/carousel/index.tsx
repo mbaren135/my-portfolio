@@ -86,6 +86,7 @@ export default function CardCarousel({
               title={p.title}
               image={p.image || null}
               state={{ isEnlarged, setIsEnlarged }}
+              isActive={current === index}
             >
               {p.content}
             </Card>
@@ -140,42 +141,65 @@ function Card({
   title,
   image,
   state,
+  isActive,
   children,
 }: {
   title: string;
   image: ReactNode | null;
-  state: { isEnlarged: boolean; setIsEnlarged: (arg: boolean) => void };
+  state: { isEnlarged: boolean; setIsEnlarged: (arg: any) => void };
+  isActive: boolean;
   children: ReactNode;
 }) {
   const { isEnlarged, setIsEnlarged } = state;
 
-  if (isEnlarged) {
-    return (
-      <div className={s.imageEnlarged}>
-        <button className={s.closeButton} onClick={() => setIsEnlarged(false)}>
-          <CloseIcon />
-        </button>
-        <Image
-          src="/images/ATS-job-example.png"
-          alt="Michael Baren headshot"
-          width={249}
-          height={110}
-          className={s.image}
-          // onClick={() => console.log("Clicked")}
-        />
-      </div>
-    );
-  }
+  // if (isEnlarged) {
+  //   return (
+  //     <div className={s.imageEnlarged}>
+  //       <button className={s.closeButton} onClick={() => setIsEnlarged(false)}>
+  //         <CloseIcon />
+  //       </button>
+  //       {/* <Image
+  //         src="/images/ATS-job-example.png"
+  //         alt="Michael Baren headshot"
+  //         width={249}
+  //         height={110}
+  //         className={s.image}
+  //         // onClick={() => console.log("Clicked")}
+  //       /> */}
+  //       {image}
+  //     </div>
+  //   );
+  // }
 
+  console.log({ isEnlarged });
   return (
     <>
       {image ? (
-        <div className={s.thumbnail} onClick={() => setIsEnlarged(true)}>
+        <div
+          className={`${isEnlarged ? s.imageEnlarged : s.thumbnail}`}
+          onClick={() => setIsEnlarged(true)}
+        >
+          {isEnlarged && (
+            <button
+              className={s.closeButton}
+              onClick={(e) => {
+                e.stopPropagation();
+                console.log("click");
+                setIsEnlarged(false);
+              }}
+            >
+              <CloseIcon />
+            </button>
+          )}
           {image}
         </div>
       ) : null}
-      <div className={s.title}>{title}</div>
-      <div className={s.cardBody}>{children}</div>
+      {(!isActive || (isActive && !isEnlarged)) && (
+        <>
+          <div className={s.title}>{title}</div>
+          <div className={s.cardBody}>{children}</div>
+        </>
+      )}
     </>
   );
 }

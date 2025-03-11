@@ -17,9 +17,10 @@ export default function Projects() {
         <Image
           src="/images/ATS-job-example.png"
           alt="Michael Baren headshot"
-          width={249}
-          height={110}
-          // onClick={() => console.log("Clicked")}
+          // width={1740}
+          // height={770}
+          fill
+          // sizes="50%"
         />
       ),
       content: <ATSCardContent />,

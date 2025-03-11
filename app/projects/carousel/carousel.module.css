@@ -101,20 +101,35 @@
 }
 
 .thumbnail {
+  position: relative;
+  height: 150px;
   width: 100%;
-  display: flex;
-  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  overflow: hidden;
 }
 
-.thumbnail:first-child {
+.thumbnail img {
   cursor: pointer;
+  object-fit: contain;
 }
 
 .imageEnlarged {
-  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   height: 100%;
-  position: relative;
+  z-index: 10;
+  transition: all 0.6s ease-in-out;
+  background-color: rgba(0, 0, 0, 0.2);
 }
+
+.imageEnlarged img {
+  object-fit: contain;
+}
+
 .closeButton {
   --close-btn-color: rgba(255, 74, 74, 1);
 
@@ -126,22 +141,19 @@
   position: absolute;
   top: 0;
   right: 0;
-  z-index: 2;
-  margin: 4px;
-  background-color: transparent;
+  z-index: 11;
+  margin: 8px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  /* border: solid tra 1px; */
   color: var(--close-btn-color);
   border: none;
 }
 .closeButton:hover {
-  border: solid var(--close-btn-color) 1px;
-  border-radius: 5px;
-  background-color: rgba(0, 0, 0, 0.1);
+  /* border: solid var(--close-btn-color) 1px; */
+  /* border-radius: 5px; */
+  background-color: rgba(255, 255, 255, 1);
   cursor: pointer;
-}
-
-.image {
-  width: 100%;
-  height: 100%;
 }
 
 @media (prefers-color-scheme: dark) {
