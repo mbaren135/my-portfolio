@@ -1,13 +1,12 @@
-import { SVGProps } from "react";
-
+import { IconProps } from "@/types";
 /** SVG downloaded from "https://www.svgrepo.com/svg/512317/github-142" */
 
-export default function GithubIcon(props: SVGProps<SVGSVGElement>) {
+export default function GithubIcon({ size = "22px", ...props }: IconProps) {
   return (
     <svg
       {...props}
-      width="22px"
-      height="22px"
+      width={size}
+      height={size}
       viewBox="0 0 20 20"
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"

@@ -13,7 +13,7 @@
   --link-primary-accent: var(--primary-accent);
 
   display: grid;
-  grid-template-rows: 20px 1fr 20px;
+  grid-template-rows: 20px 1fr;
   align-items: center;
   justify-items: center;
   min-height: var(--page-view-height);
