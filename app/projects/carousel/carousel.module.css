@@ -1,0 +1,165 @@
+.carousel {
+  --card-bg-color: rgba(255, 255, 255, 1);
+  --card-accent-color: rgba(0, 0, 0, 0.1);
+  --card-text-color: rgba(0, 0, 0, 1);
+
+  position: relative;
+  width: 70%;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.carousel .card {
+  position: absolute;
+  height: 90%;
+  top: 0;
+  width: 100%;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  border-radius: 10px;
+  border: solid var(--card-accent-color) 1px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+  transition: 500ms;
+  background-color: var(--card-bg-color);
+  color: var(--card-text-color);
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 500;
+  padding: 16px;
+  width: 100%;
+  border-bottom: solid var(--card-accent-color) 2px;
+}
+
+.cardBody {
+  padding: 0px 16px 16px 16px;
+  margin-top: 16px;
+  text-align: start;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.button {
+  position: absolute;
+  border-radius: 50%;
+  border: transparent;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  left: -20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: var(--primary-text-color);
+  background-color: var(--primary-fill);
+  opacity: 1;
+  transition: opacity 500ms ease-in-out;
+}
+.button:not(:disabled):hover {
+  border: solid var(--primary-accent) 2px;
+}
+
+.button:disabled {
+  opacity: 0.5;
+  transition: opacity 500ms ease-in-out;
+  cursor: default;
+}
+
+.next {
+  left: unset;
+  right: -20%;
+}
+
+.indicatorContainer {
+  display: flex;
+  flex-direction: row;
+  justify-self: flex-end;
+  justify-content: center;
+}
+
+.indicator {
+  background-color: var(--primary-fill);
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  border: solid transparent;
+  margin: 12px;
+  opacity: 0.5;
+}
+
+.active {
+  scale: 1.2;
+  opacity: 1;
+  transition: all 500ms ease-in-out;
+}
+
+.thumbnail {
+  position: relative;
+  height: 150px;
+  width: 100%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.thumbnail img {
+  cursor: pointer;
+  object-fit: contain;
+}
+
+.imageEnlarged {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  z-index: 10;
+  transition: all 0.6s ease-in-out;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.imageEnlarged img {
+  object-fit: contain;
+}
+
+.closeButton {
+  --close-btn-color: rgba(255, 74, 74, 1);
+
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 11;
+  margin: 8px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  /* border: solid tra 1px; */
+  color: var(--close-btn-color);
+  border: none;
+}
+.closeButton:hover {
+  /* border: solid var(--close-btn-color) 1px; */
+  /* border-radius: 5px; */
+  background-color: rgba(255, 255, 255, 1);
+  cursor: pointer;
+}
+
+@media (prefers-color-scheme: dark) {
+  .card {
+    --card-bg-color: rgba(45, 45, 45, 1);
+    --card-accent-color: rgba(255, 255, 255, 0.4);
+    --card-text-color: rgba(255, 255, 255, 1);
+  }
+}

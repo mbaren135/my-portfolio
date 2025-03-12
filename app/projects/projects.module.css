@@ -1,0 +1,94 @@
+.page {  
+    --button-primary-hover: #383838;
+    --button-secondary-hover: #f2f2f2;
+  
+    --link-primary-color: var(--primary-fill);
+    --link-primary-accent: var(--primary-accent);
+  
+    --link-primary-color: var(--primary-fill);
+    --link-primary-accent: var(--primary-accent);
+  
+    display: grid;
+    grid-template-rows: 20px 1fr;
+    align-items: center;
+    justify-items: center;
+    min-height: var(--page-view-height);
+    padding: auto 40px auto 40px;
+    gap: 32px;
+    font-family: var(--font-geist-sans);
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    .page {  
+      --button-primary-hover: #ccc;
+      --button-secondary-hover: #1a1a1a;
+  
+      --link-primary-color: var(--primary-text-color);
+      --link-primary-accent: var(--primary-accent)
+  
+      --link-primary-color: var(--primary-text-color);
+      --link-primary-accent: var(--primary-accent)
+    }
+  }
+  
+  .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 75%;
+    gap: 16px;
+    grid-row-start: 2;
+  }
+  
+  .main h1 {
+    font-size: 40px;
+  }
+  
+  /* Enable hover only on non-touch devices */
+  @media (hover: hover) and (pointer: fine) {
+    a.primary:hover {
+      background: var(--button-primary-hover);
+      border-color: transparent;
+    }
+  
+    a.secondary:hover {
+      background: var(--button-secondary-hover);
+      border-color: transparent;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .page {
+      padding: 32px;
+      padding-bottom: 80px;
+    }
+  
+    .main {
+      align-items: center;
+    }
+  
+    .main ol {
+      text-align: center;
+    }
+  
+    .ctas {
+      flex-direction: column;
+    }
+  
+    .ctas a {
+      font-size: 14px;
+      height: 40px;
+      padding: 0 16px;
+    }
+  
+    a.secondary {
+      min-width: auto;
+    }
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    
+  }
+  
