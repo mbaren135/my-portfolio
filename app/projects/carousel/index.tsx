@@ -1,7 +1,6 @@
 "use client";
 
 import { ReactNode, useEffect, useState } from "react";
-import Image from "next/image";
 import { ChevronLeftIcon, ChevronRightIcon, CloseIcon } from "@/assets/icons";
 import { ProjectCardType } from "../../../types";
 import s from "./carousel.module.css";
@@ -152,26 +151,6 @@ function Card({
 }) {
   const { isEnlarged, setIsEnlarged } = state;
 
-  // if (isEnlarged) {
-  //   return (
-  //     <div className={s.imageEnlarged}>
-  //       <button className={s.closeButton} onClick={() => setIsEnlarged(false)}>
-  //         <CloseIcon />
-  //       </button>
-  //       {/* <Image
-  //         src="/images/ATS-job-example.png"
-  //         alt="Michael Baren headshot"
-  //         width={249}
-  //         height={110}
-  //         className={s.image}
-  //         // onClick={() => console.log("Clicked")}
-  //       /> */}
-  //       {image}
-  //     </div>
-  //   );
-  // }
-
-  console.log({ isEnlarged });
   return (
     <>
       {image ? (
