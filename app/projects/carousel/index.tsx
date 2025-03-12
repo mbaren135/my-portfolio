@@ -145,7 +145,7 @@ function Card({
 }: {
   title: string;
   image: ReactNode | null;
-  state: { isEnlarged: boolean; setIsEnlarged: (arg: any) => void };
+  state: { isEnlarged: boolean; setIsEnlarged: (arg: boolean) => void };
   isActive: boolean;
   children: ReactNode;
 }) {
