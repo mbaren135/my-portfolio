@@ -188,7 +188,7 @@ function Card({
                 setIsEnlarged(false);
               }}
             >
-              <CloseIcon />
+              <CloseIcon size="22px"/>
             </button>
           )}
           {image}

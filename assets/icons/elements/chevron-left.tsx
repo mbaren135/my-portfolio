@@ -1,11 +1,11 @@
-import { ChevronIconProps } from "@/types";
+import { IconProps } from "@/types";
 
 /** SVG downloaded from "https://fonts.google.com/icons?selected=Material+Symbols+Outlined:chevron_left:FILL@0;wght@400;GRAD@0;opsz@24&icon.size=24&icon.color=%23e3e3e3" */
 
 export default function ChevronLeftIcon({
   size = "24px",
   ...props
-}: ChevronIconProps) {
+}: IconProps) {
   return (
     <svg
       {...props}

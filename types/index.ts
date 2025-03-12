@@ -1,4 +1,4 @@
 import { ProjectCardType } from "./project-card";
-import { ChevronIconProps } from "./chevron-icon";
+import { IconProps } from "./icon";
 
-export type { ProjectCardType, ChevronIconProps };
+export type { ProjectCardType, IconProps };
