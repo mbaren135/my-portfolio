@@ -9,7 +9,7 @@
     --link-primary-accent: var(--primary-accent);
   
     display: grid;
-    grid-template-rows: 20px 1fr;
+    grid-template-rows: calc(var(--nav-height) + 20px) 1fr;
     align-items: center;
     justify-items: center;
     min-height: var(--page-view-height);
@@ -24,7 +24,7 @@
       --button-secondary-hover: #1a1a1a;
   
       --link-primary-color: var(--primary-text-color);
-      --link-primary-accent: var(--primary-accent)
+      --link-primary-accent: var(--primary-accent);
   
       --link-primary-color: var(--primary-text-color);
       --link-primary-accent: var(--primary-accent)

@@ -1,0 +1,114 @@
+.page {
+  --gray-rgb: 0, 0, 0;
+  --gray-alpha-200: rgba(var(--gray-rgb), 0.08);
+  --gray-alpha-100: rgba(var(--gray-rgb), 0.05);
+
+  --button-primary-hover: #383838;
+  --button-secondary-hover: #f2f2f2;
+
+  --link-primary-color: var(--primary-fill);
+  --link-primary-accent: var(--primary-accent);
+
+  --link-primary-color: var(--primary-fill);
+  --link-primary-accent: var(--primary-accent);
+
+  /* display: grid;
+  grid-template-rows: 20px 1fr; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: start;
+  min-height: var(--page-view-height);
+  padding-top: calc(var(--nav-height) + 10px);
+  padding-bottom: calc(var(--footer-height) + 5px);
+  padding-left: 40px;
+  padding-right: 40px;
+  gap: 32px;
+  font-family: var(--font-geist-sans);
+  background-color: var(--background);
+  background-image: url("/images/Purdue-University2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media (prefers-color-scheme: dark) {
+  .page {
+    --gray-rgb: 255, 255, 255;
+    --gray-alpha-200: rgba(var(--gray-rgb), 0.145);
+    --gray-alpha-100: rgba(var(--gray-rgb), 0.06);
+
+    --button-primary-hover: #ccc;
+    --button-secondary-hover: #1a1a1a;
+
+    --link-primary-color: var(--primary-text-color);
+    --link-primary-accent: var(--primary-accent);
+
+    --link-primary-color: var(--primary-text-color);
+    --link-primary-accent: var(--primary-accent);
+  }
+}
+
+.main {
+  /* margin-top: calc(var(--nav-height) + 5px); */
+  display: flex;
+  flex-direction: column;
+  max-width: 65%;
+  gap: 16px;
+  border-radius: 24px;
+  background-color: rgba(255, 255, 255, 0.7);
+  height: calc(var(--page-view-height) - 40px);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.section {
+  position: relative;
+  display: grid;
+  gap: 16px;
+}
+
+.section.leftAligned {
+  grid-template-columns: 2fr 1fr;
+}
+
+.section.rightAligned {
+  grid-template-columns: 1fr 2fr;
+}
+
+.section p {
+  font-size: 16px;
+}
+
+@media (max-width: 1300) {
+  .section.leftAligned {
+    grid-template-columns: 1fr 1fr;
+  }
+  .section.rightAligned {
+    grid-template-columns: 1fr 1fr;
+  }
+  .section p {
+    font-size: 14px;
+  }
+}
+
+.sectionContent {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  padding: 16px;
+  gap: 16px;
+}
+
+.sectionImage {
+  position: relative;
+  /* padding: 8px; */
+  margin: 8px;
+  min-width: fit-content;
+  min-height: fit-content;
+}
+
+.image {
+  object-fit: contain;
+}

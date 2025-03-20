@@ -50,13 +50,13 @@ export default function Home() {
     //   </main>
     <div className={styles.page}>
       <main className={styles.main}>
-        <Image
+        {/* <Image
           className={styles.headshot}
           src="/images/headshot.JPG"
           alt="Michael Baren headshot"
           width={550}
           height={826}
-        />
+        /> */}
         <h1>Michael Baren</h1>
       </main>
       <Footer />
