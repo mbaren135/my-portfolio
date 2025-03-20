@@ -30,7 +30,6 @@ export default function Navbar() {
           style={{ padding: "0 16px" }}
           onClick={() => {
             setSidebarVisibility(false);
-            console.log("clicked");
           }}
         >
           <CloseIcon color="white" />
@@ -39,7 +38,11 @@ export default function Navbar() {
           if (index === 0) return null;
           return (
             <li key={index} className={s.navItem}>
-              <Link className={s.navLink} href={page.href}>
+              <Link
+                className={s.navLink}
+                href={page.href}
+                onClick={() => setSidebarVisibility(false)}
+              >
                 {page.label}
               </Link>
             </li>
@@ -52,7 +55,15 @@ export default function Navbar() {
           const styles = s.navItem + (index !== 0 ? " " + s.hideOnMobile : "");
           return (
             <li key={index} className={styles}>
-              <Link className={s.navLink} href={page.href}>
+              <Link
+                className={s.navLink}
+                href={page.href}
+                onClick={() => {
+                  if (index === 0) {
+                    setSidebarVisibility(false);
+                  }
+                }}
+              >
                 {page.label}
               </Link>
             </li>
