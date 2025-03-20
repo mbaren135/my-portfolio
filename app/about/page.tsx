@@ -1,21 +1,16 @@
 import Image from "next/image";
 import { Footer } from "@/components";
-import bg from "@/public/images/Purdue-University.jpg";
 import s from "./about.module.css";
 
 export default function About() {
   return (
-    <div
-      className={
-        s.page
-      } /*style={{backgroundImage: `url(${bg.src})`, objectFit: "cover"}}*/
-    >
+    <div className={s.page}>
       <main className={s.main}>
         <div className={`${s.section} ${s.leftAligned}`}>
           <div className={s.sectionContent}>
             <p>
               I am set to graduate from Purdue University in May 2025 with a
-              bachelor's degree in Computer Science. Throughout my academic
+              bachelor&apos;s degree in Computer Science. Throughout my academic
               journey, I have gained experience in object-oriented programming,
               data structures and algorithms, machine learning, computer
               graphics, computer networking, and systems programming. I have
@@ -34,7 +29,7 @@ export default function About() {
             </p>
           </div>
           <div className={s.sectionImage}>
-          <Image
+            <Image
               className={s.image}
               src="/images/Department-of-Computer-Science.png"
               alt="Purdue University Department of CS logo"
@@ -43,14 +38,8 @@ export default function About() {
             />
           </div>
         </div>
-        <div
-          className={`${s.section} ${s.rightAligned}`}
-          // style={{ backgroundColor: "lime" }}
-        >
-          <div
-            className={s.sectionImage}
-            // style={{ backgroundColor: "skyblue" }}
-          >
+        <div className={`${s.section} ${s.rightAligned}`}>
+          <div className={s.sectionImage}>
             <Image
               className={s.image}
               src="/images/headshot.JPG"
@@ -59,9 +48,7 @@ export default function About() {
               sizes="(max-width: 768px) 100vw, 50vw"
             />
           </div>
-          <div
-            className={s.sectionContent} /*style={{ backgroundColor: "pink" }}*/
-          >
+          <div className={s.sectionContent}>
             <p>
               Beyond academics, I was a nationally recognized gymnast for 12
               years before transitioning to cheerleading as a junior in high
