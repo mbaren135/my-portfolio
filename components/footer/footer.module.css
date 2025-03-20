@@ -4,8 +4,16 @@
   --link-primary-hover-fill: rgb(233, 233, 233);
 
   grid-row-start: 3;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: var(--footer-height);
   display: flex;
+  justify-content: center;
   gap: 16px;
+  background-color: var(--background);
+  /* z-index: 10; */
+  width: 100vw;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -19,7 +27,7 @@
 .footer a {
   display: flex;
   align-items: center;
-  gap: 4px;
+  margin: 4px 0px;
   padding: 8px;
   color: var(--link-primary-color);
 }

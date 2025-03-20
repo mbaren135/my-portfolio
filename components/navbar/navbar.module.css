@@ -8,7 +8,8 @@
   background-color: var(--primary-fill);
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
   z-index: 10;
-  position: sticky;
+  position: fixed;
+  width: 100%;
   top: 0;
   color: var(--primary-text-color);
 }
