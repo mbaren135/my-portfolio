@@ -7,6 +7,37 @@
   --nav-height: 60px;
   --footer-height: 60px;
   --page-view-height: calc(100svh - var(--nav-height) - var(--footer-height));
+
+  --text-size-xl: 40px;
+  --text-size-large: 36px;
+  --text-size-medium: 24px;
+  --text-size-body: 16px;
+  --text-size-caption: 12px;
+}
+
+@media (max-width: 1000px) {
+  :root {
+    --text-size-xl: 36px;
+    --text-size-large: 30px;
+    --text-size-medium: 24px;
+    --text-size-body: 14px
+  }
+}
+
+@media (max-width: 700px) {
+  :root {
+    --text-size-xl: 30px;
+    --text-size-large: 24px;
+    --text-size-medium: 16px;
+    --text-size-body: 12px
+  }
+}
+
+@media (max-width: 375px) {
+  :root {
+    --text-size-xl: 24px;
+    --text-size-large: 20px;
+  }
 }
 
 @media (prefers-color-scheme: dark) {

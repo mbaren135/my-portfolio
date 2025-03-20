@@ -30,7 +30,7 @@
 }
 
 .title {
-  font-size: 36px;
+  font-size: var(--text-size-large);
   font-weight: 500;
   padding: 16px;
   width: 100%;
@@ -145,13 +145,10 @@
   margin: 8px;
   background-color: rgba(255, 255, 255, 0.6);
   border-radius: 50%;
-  /* border: solid tra 1px; */
   color: var(--close-btn-color);
   border: none;
 }
 .closeButton:hover {
-  /* border: solid var(--close-btn-color) 1px; */
-  /* border-radius: 5px; */
   background-color: rgba(255, 255, 255, 1);
   cursor: pointer;
 }
