@@ -68,14 +68,6 @@
   font-size: var(--text-size-body);
 }
 
-@media (max-width: 1300) {
-  .section.leftAligned {
-    grid-template-columns: 1fr 1fr;
-  }
-  .section.rightAligned {
-    grid-template-columns: 1fr 1fr;
-  }
-}
 
 .sectionContent {
   display: flex;
@@ -95,4 +87,27 @@
 
 .image {
   object-fit: contain;
+}
+
+@media (max-width: 1300) {
+  .section.leftAligned {
+    grid-template-columns: 1fr 1fr;
+  }
+  .section.rightAligned {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 850) {
+  .main {
+    gap: 0px;
+  }
+  .section {
+    display: flex;
+  }
+  .sectionImage {
+    display: none;
+  }
+  .sectionContent:last-child {
+    padding-top: 0px;
+  }
 }
