@@ -31,7 +31,7 @@ export default function About() {
           <div className={s.sectionImage}>
             <Image
               className={s.image}
-              src="/images/Department-of-Computer-Science.png"
+              src="/images/Bell-Tower.jpg"
               alt="Purdue University Department of CS logo"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
