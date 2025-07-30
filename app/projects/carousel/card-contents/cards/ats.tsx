@@ -5,7 +5,7 @@ export default function ATSCardContent() {
     <>
       <div className={s.content}>
         <p>
-          As a <strong>Software Development Intern</strong> at{" "}
+          As a <strong>Software Developmer</strong> at{" "}
           <strong>HirexHire</strong>, a Chicago-based recruiting firm, I am part
           of a dynamic development team responsible for building an{" "}
           <strong>applicant tracking system</strong> using{" "}
