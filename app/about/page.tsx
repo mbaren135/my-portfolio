@@ -8,7 +8,7 @@ export default function About() {
         <div className={`${s.section} ${s.leftAligned}`}>
           <div className={s.sectionContent}>
             <p>
-              I graduated from Purdue Univserity in May 2025 with a
+              I graduated from Purdue University in May 2025 with a
               bachelor&apos;s degree in Computer Science and a minor in
               Mathematics. Throughout my academic journey, I have gained
               experience in object-oriented programming, data structures and
