@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { Footer } from "@/components";
 import CardCarousel from "./carousel";
 import { PortfolioCard, ATSCardContent } from "./carousel/card-contents";
 import { ProjectCardType } from "../../types";
@@ -30,7 +29,6 @@ export default function Projects() {
       <main className={s.main}>
         <CardCarousel projects={projects} />
       </main>
-      <Footer />
     </div>
   );
 }
