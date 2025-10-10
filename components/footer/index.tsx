@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer className={s.footer}>
       <a
-        href="https://linkedin.com/in/michael-baren-79405727a"
+        href="https://linkedin.com/in/michael-baren"
         target="_blank"
         rel="noopener noreferrer"
       >
